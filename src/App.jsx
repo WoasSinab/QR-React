@@ -12,11 +12,16 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
-      {/* Main Content */}
-      <div className="text-center">
+    <div
+      className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center"
+      style={{
+        backgroundImage: 'url("https://www.transparenttextures.com/patterns/dark-matter.png")',
+      }}
+    >
+      {/* Main Content Container */}
+      <div className="bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg text-center">
         <h1 id="neon-title" className="text-4xl font-bold mb-4">
-          {["Q", "R", " ", "C", "o", "d", "e"].map((letter, index) => (
+          {["Q", "R", " ", "G", "e", "n", "e", "r", "a", "t", "o", "r"].map((letter, index) => (
             <span
               key={index}
               className="inline-block neon-text"

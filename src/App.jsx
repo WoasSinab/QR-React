@@ -44,7 +44,7 @@ function App() {
             transition={{ duration: 1 }}
             className='absolute z-20'
           >
-            <h1 className='text-6xl font-bold text-white'>S I N A B</h1>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold text-white'>S I N A B</h1>
           </motion.div>
         )}
       </AnimatePresence>
@@ -55,27 +55,26 @@ function App() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className='relative bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg text-center z-10'
+          className='relative bg-gray-800 bg-opacity-75 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg text-center z-10 w-full max-w-md mx-4'
         >
-          <h1 id='neon-title' className='text-4xl font-bold pb-9'>
+          <h1 id='neon-title' className='text-2xl sm:text-3xl md:text-4xl font-bold p-6'>
             {["Q", "R", " ", "G", "e", "n", "e", "r", "a", "t", "o", "r"].map((letter, index) => (
               <span
-              key={index}
-              className={`inline-block neon-text ${letter === " " ? "w-4" : ""}`} // اضافه کردن فاصله
-              style={{ "--delay": index * 0.2 }}
-            >
-              {letter}
-            </span>
+                key={index}
+                className={`inline-block neon-text ${letter === " " ? "w-4" : ""}`} // اضافه کردن فاصله
+                style={{ "--delay": index * 0.2 }}
+              >
+                {letter}
+              </span>
             ))}
           </h1>
-          {/* <p className='mb-6'>Please enter your desired URL:</p> */}
 
           <input
             type='text'
             placeholder='https://example.com'
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className='w-full p-3 mb-4 border rounded bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all'
+            className='w-full p-2 sm:p-3 mb-4 border rounded bg-gray-700 border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all'
           />
 
           <AnimatePresence>
@@ -87,7 +86,7 @@ function App() {
                 transition={{ duration: 0.5 }}
                 className='mt-6 flex justify-center'
               >
-                <QRCode value={url} size={200} fgColor='#ffffff' bgColor='transparent' />
+                <QRCode value={url} size={150} fgColor='#ffffff' bgColor='transparent' />
               </motion.div>
             )}
           </AnimatePresence>
@@ -96,7 +95,7 @@ function App() {
 
       {/* Footer */}
       <footer className='fixed bottom-4 text-center z-10'>
-        <p>
+        <p className='text-sm sm:text-md'>
           Created By{" "}
           <a
             href='https://sinab.framer.website/'

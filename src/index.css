@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Vazir", sans-serif;
+}
+
+
 #neon-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
